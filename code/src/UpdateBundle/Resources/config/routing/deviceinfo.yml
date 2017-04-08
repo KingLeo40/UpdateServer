@@ -1,0 +1,12 @@
+deviceinfo_index:
+    path:     /
+    defaults: { _controller: "UpdateBundle:DeviceInfo:index" }
+    methods:  GET
+
+deviceinfo_show:
+    path:     /{id}/show
+    defaults: { _controller: "UpdateBundle:DeviceInfo:show" }
+    methods:  GET
+
+
+

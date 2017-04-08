@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Productinfo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ productInfo.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ productInfo.name }}</td>
+            </tr>
+            <tr>
+                <th>Globalconfig</th>
+                <td>{{ productInfo.globalConfig }}</td>
+            </tr>
+            <tr>
+                <th>Updateconfig</th>
+                <td>{{ productInfo.updateConfig }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('productinfo_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('productinfo_edit', { 'id': productInfo.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

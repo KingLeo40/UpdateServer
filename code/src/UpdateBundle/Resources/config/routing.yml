@@ -1,0 +1,4 @@
+update_updateconfig:
+    resource: "@UpdateBundle/Resources/config/routing/updateconfig.yml"
+    prefix:   /updateconfig
+

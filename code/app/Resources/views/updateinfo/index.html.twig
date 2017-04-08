@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Updateinfos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Version</th>
+                <th>Channel</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Forceexec</th>
+                <th>Message</th>
+                <th>Resversion</th>
+                <th>Resourceurl</th>
+                <th>Resourcesuffix</th>
+                <th>Resourcemd5</th>
+                <th>Resourcesize</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for updateInfo in updateInfos %}
+            <tr>
+                <td><a href="{{ path('updateinfo_show', { 'id': updateInfo.id }) }}">{{ updateInfo.id }}</a></td>
+                <td>{{ updateInfo.version }}</td>
+                <td>{{ updateInfo.channel }}</td>
+                <td>{{ updateInfo.type }}</td>
+                <td>{{ updateInfo.status }}</td>
+                <td>{% if updateInfo.forceExec %}Yes{% else %}No{% endif %}</td>
+                <td>{{ updateInfo.message }}</td>
+                <td>{{ updateInfo.resVersion }}</td>
+                <td>{{ updateInfo.resourceUrl }}</td>
+                <td>{{ updateInfo.resourceSuffix }}</td>
+                <td>{{ updateInfo.resourceMd5 }}</td>
+                <td>{{ updateInfo.resourceSize }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('updateinfo_show', { 'id': updateInfo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('updateinfo_edit', { 'id': updateInfo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('updateinfo_new') }}">Create a new updateInfo</a>
+        </li>
+    </ul>
+{% endblock %}

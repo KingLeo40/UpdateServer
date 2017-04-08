@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Deviceinfos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Uuid</th>
+                <th>Productname</th>
+                <th>Channel</th>
+                <th>Appversion</th>
+                <th>Innerversion</th>
+                <th>Localversion</th>
+                <th>Osversion</th>
+                <th>Model</th>
+                <th>Devicemodle</th>
+                <th>Memory</th>
+                <th>Screensize</th>
+                <th>Netstate</th>
+                <th>Country</th>
+                <th>Language</th>
+                <th>Process_info</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for deviceInfo in deviceInfos %}
+            <tr>
+                <td><a href="{{ path('deviceinfo_show', { 'id': deviceInfo.id }) }}">{{ deviceInfo.id }}</a></td>
+                <td>{{ deviceInfo.uuid }}</td>
+                <td>{{ deviceInfo.productName }}</td>
+                <td>{{ deviceInfo.channel }}</td>
+                <td>{{ deviceInfo.appVersion }}</td>
+                <td>{{ deviceInfo.innerVersion }}</td>
+                <td>{{ deviceInfo.localVersion }}</td>
+                <td>{{ deviceInfo.osVersion }}</td>
+                <td>{{ deviceInfo.model }}</td>
+                <td>{{ deviceInfo.deviceModle }}</td>
+                <td>{{ deviceInfo.memory }}</td>
+                <td>{{ deviceInfo.screenSize }}</td>
+                <td>{{ deviceInfo.netState }}</td>
+                <td>{{ deviceInfo.country }}</td>
+                <td>{{ deviceInfo.language }}</td>
+                <td>{{ deviceInfo.processinfo }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('deviceinfo_show', { 'id': deviceInfo.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

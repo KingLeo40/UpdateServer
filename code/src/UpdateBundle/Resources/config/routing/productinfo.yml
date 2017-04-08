@@ -1,0 +1,24 @@
+productinfo_index:
+    path:     /
+    defaults: { _controller: "UpdateBundle:ProductInfo:index" }
+    methods:  GET
+
+productinfo_show:
+    path:     /{id}/show
+    defaults: { _controller: "UpdateBundle:ProductInfo:show" }
+    methods:  GET
+
+productinfo_new:
+    path:     /new
+    defaults: { _controller: "UpdateBundle:ProductInfo:new" }
+    methods:  [GET, POST]
+
+productinfo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UpdateBundle:ProductInfo:edit" }
+    methods:  [GET, POST]
+
+productinfo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UpdateBundle:ProductInfo:delete" }
+    methods:  DELETE

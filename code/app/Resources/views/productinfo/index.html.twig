@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Productinfos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Globalconfig</th>
+                <th>Updateconfig</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for productInfo in productInfos %}
+            <tr>
+                <td><a href="{{ path('productinfo_show', { 'id': productInfo.id }) }}">{{ productInfo.id }}</a></td>
+                <td>{{ productInfo.name }}</td>
+                <td>{{ productInfo.globalConfig }}</td>
+                <td>{{ productInfo.updateConfig }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('productinfo_show', { 'id': productInfo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('productinfo_edit', { 'id': productInfo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('productinfo_new') }}">Create a new productInfo</a>
+        </li>
+    </ul>
+{% endblock %}

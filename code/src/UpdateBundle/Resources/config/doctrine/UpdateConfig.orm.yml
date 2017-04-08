@@ -1,0 +1,28 @@
+UpdateBundle\Entity\UpdateConfig:
+    type: entity
+    table: null
+    repositoryClass: UpdateBundle\Repository\UpdateConfigRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        appVersion:
+            type: string
+            length: 255
+        channel:
+            type: string
+            length: 255
+        status:
+            type: integer
+        redirect:
+            type: string
+            length: 255
+        limitInfo:
+            type: string
+            length: 255
+        showTip:
+            type: boolean
+    lifecycleCallbacks: {  }

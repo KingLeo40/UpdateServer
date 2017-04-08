@@ -1,0 +1,24 @@
+updateconfig_index:
+    path:     /
+    defaults: { _controller: "UpdateBundle:UpdateConfig:index" }
+    methods:  GET
+
+updateconfig_show:
+    path:     /{id}/show
+    defaults: { _controller: "UpdateBundle:UpdateConfig:show" }
+    methods:  GET
+
+updateconfig_new:
+    path:     /new
+    defaults: { _controller: "UpdateBundle:UpdateConfig:new" }
+    methods:  [GET, POST]
+
+updateconfig_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UpdateBundle:UpdateConfig:edit" }
+    methods:  [GET, POST]
+
+updateconfig_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UpdateBundle:UpdateConfig:delete" }
+    methods:  DELETE

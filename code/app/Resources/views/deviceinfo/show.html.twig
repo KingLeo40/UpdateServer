@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Deviceinfo</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ deviceInfo.id }}</td>
+            </tr>
+            <tr>
+                <th>Uuid</th>
+                <td>{{ deviceInfo.uuid }}</td>
+            </tr>
+            <tr>
+                <th>Productname</th>
+                <td>{{ deviceInfo.productName }}</td>
+            </tr>
+            <tr>
+                <th>Channel</th>
+                <td>{{ deviceInfo.channel }}</td>
+            </tr>
+            <tr>
+                <th>Appversion</th>
+                <td>{{ deviceInfo.appVersion }}</td>
+            </tr>
+            <tr>
+                <th>Innerversion</th>
+                <td>{{ deviceInfo.innerVersion }}</td>
+            </tr>
+            <tr>
+                <th>Localversion</th>
+                <td>{{ deviceInfo.localVersion }}</td>
+            </tr>
+            <tr>
+                <th>Osversion</th>
+                <td>{{ deviceInfo.osVersion }}</td>
+            </tr>
+            <tr>
+                <th>Model</th>
+                <td>{{ deviceInfo.model }}</td>
+            </tr>
+            <tr>
+                <th>Devicemodle</th>
+                <td>{{ deviceInfo.deviceModle }}</td>
+            </tr>
+            <tr>
+                <th>Memory</th>
+                <td>{{ deviceInfo.memory }}</td>
+            </tr>
+            <tr>
+                <th>Screensize</th>
+                <td>{{ deviceInfo.screenSize }}</td>
+            </tr>
+            <tr>
+                <th>Netstate</th>
+                <td>{{ deviceInfo.netState }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ deviceInfo.country }}</td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td>{{ deviceInfo.language }}</td>
+            </tr>
+            <tr>
+                <th>Process_info</th>
+                <td>{{ deviceInfo.processinfo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('deviceinfo_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

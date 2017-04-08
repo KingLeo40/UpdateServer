@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Updateconfigs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Version</th>
+                <th>Channel</th>
+                <th>Status</th>
+                <th>Redirect</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for updateConfig in updateConfigs %}
+            <tr>
+                <td><a href="{{ path('updateconfig_show', { 'id': updateConfig.id }) }}">{{ updateConfig.id }}</a></td>
+                <td>{{ updateConfig.version }}</td>
+                <td>{{ updateConfig.channel }}</td>
+                <td>{{ updateConfig.status }}</td>
+                <td>{{ updateConfig.redirect }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('updateconfig_show', { 'id': updateConfig.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('updateconfig_edit', { 'id': updateConfig.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('updateconfig_new') }}">Create a new updateConfig</a>
+        </li>
+    </ul>
+{% endblock %}

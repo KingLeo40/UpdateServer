@@ -1,0 +1,4 @@
+services:
+#    update.example:
+#        class: UpdateBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

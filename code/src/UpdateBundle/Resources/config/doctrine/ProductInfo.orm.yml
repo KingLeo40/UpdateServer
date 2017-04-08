@@ -1,0 +1,22 @@
+UpdateBundle\Entity\ProductInfo:
+    type: entity
+    table: null
+    repositoryClass: UpdateBundle\Repository\ProductInfoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+        globalConfig:
+            type: string
+            length: 255
+        updateConfig:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

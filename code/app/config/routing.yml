@@ -1,0 +1,19 @@
+update_productinfo:
+    resource: "@UpdateBundle/Resources/config/routing/productinfo.yml"
+    prefix: /productinfo
+
+update_updateconfig:
+    resource: "@UpdateBundle/Resources/config/routing/updateconfig.yml"
+    prefix:   /updateconfig
+
+update_updateinfo:
+    resource: "@UpdateBundle/Resources/config/routing/updateinfo.yml"
+    prefix:   /updateinfo
+
+update:
+    resource: "@UpdateBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

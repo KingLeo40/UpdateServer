@@ -1,0 +1,42 @@
+UpdateBundle\Entity\UpdateInfo:
+    type: entity
+    table: null
+    repositoryClass: UpdateBundle\Repository\UpdateInfoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        appVersion:
+            type: string
+            length: 255
+        channel:
+            type: string
+            length: 255
+        type:
+            type: string
+            length: 255
+        status:
+            type: integer
+        forceExec:
+            type: boolean
+        needRestart:
+            type: boolean
+        message:
+            type: text
+        resVersion:
+            type: string
+            length: 255
+        resourceUrl:
+            type: string
+            length: 255
+        resourceSuffix:
+            type: string
+            length: 255
+        resourceMd5:
+            type: text
+        resourceSize:
+            type: text
+    lifecycleCallbacks: {  }

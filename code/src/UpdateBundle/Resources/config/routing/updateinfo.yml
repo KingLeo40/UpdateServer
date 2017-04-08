@@ -1,0 +1,29 @@
+updateinfo_index:
+    path:     /
+    defaults: { _controller: "UpdateBundle:UpdateInfo:index" }
+    methods:  GET
+
+updateinfo_show:
+    path:     /{id}/show
+    defaults: { _controller: "UpdateBundle:UpdateInfo:show" }
+    methods:  GET
+
+updateinfo_new:
+    path:     /new
+    defaults: { _controller: "UpdateBundle:UpdateInfo:new" }
+    methods:  [GET, POST]
+
+updateinfo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UpdateBundle:UpdateInfo:edit" }
+    methods:  [GET, POST]
+
+updateinfo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UpdateBundle:UpdateInfo:delete" }
+    methods:  DELETE
+
+updateinfo_getUpdateInfo:
+   path:      /getUpdateInfo
+   defaults: { _controller: "UpdateBundle:UpdateInfo:getUpdateInfo" }
+   methods:  [GET, POST]
